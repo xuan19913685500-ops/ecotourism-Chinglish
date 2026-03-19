@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>生态旅游：影响、潜力与可能性 | 双语批注版</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1a2744;
+    --navy-dark: #111a33;
+    --navy-mid: #243060;
+    --cream: #f8f4ed;
+    --cream-dark: #f0ead8;
+    --text-main: #2c2416;
+    --text-light: #6b5f4e;
+    --yellow: #f0c040;
+    --yellow-light: #fdf3c8;
+    --yellow-border: #e6ac00;
+    --red: #c94040;
+    --red-light: #fde8e8;
+    --red-border: #b03030;
+    --blue: #2060a0;
+    --blue-light: #e0ecf8;
+    --blue-border: #1850a0;
+    --green: #2a7a45;
+    --green-light: #e2f5ea;
+    --green-border: #1e6035;
+    --purple: #7040a0;
+    --purple-light: #f0e8f8;
+    --purple-border: #5a2d90;
+    --sidebar-w: 320px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'IBM Plex Sans', sans-serif; background: var(--cream); color: var(--text-main); line-height: 1.7; }
+  html { scroll-behavior: smooth; }
+
+  .top-nav { background: var(--navy-dark); color: #fff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 16px rgba(0,0,0,0.4); }
+  .top-nav-inner { max-width: 1600px; margin: 0 auto; padding: 12px 24px; display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .nav-title-block h1 { font-family: 'Lora', serif; font-size: 1rem; font-weight: 700; color: #fff; }
+  .nav-title-block p { font-size: 0.7rem; color: rgba(255,255,255,0.55); margin-top: 2px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .legend-label { font-size: 0.62rem; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.08em; margin-right: 2px; }
+  .legend-item { display: flex; align-items: center; gap: 4px; font-size: 0.68rem; color: rgba(255,255,255,0.8); white-space: nowrap; }
+  .legend-dot { width: 9px; height: 9px; border-radius: 2px; flex-shrink: 0; }
+  .ld-yellow { background: var(--yellow); } .ld-red { background: var(--red); } .ld-blue { background: var(--blue); } .ld-green { background: var(--green); } .ld-purple { background: var(--purple); }
+
+  .chapter-nav { background: var(--navy-mid); position: sticky; top: 64px; z-index: 99; overflow-x: auto; }
+  .chapter-nav-inner { max-width: 1600px; margin: 0 auto; display: flex; }
+  .chapter-nav a { display: inline-block; padding: 9px 16px; color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.72rem; font-weight: 500; white-space: nowrap; border-bottom: 2px solid transparent; transition: all 0.2s; }
+  .chapter-nav a:hover { color: #fff; border-bottom-color: var(--yellow); background: rgba(255,255,255,0.05); }
+
+  .main-wrap { max-width: 1600px; margin: 0 auto; padding: 0 20px 60px; }
+  .section { margin: 40px 0; scroll-margin-top: 130px; }
+  .section-header { background: var(--navy); color: #fff; padding: 14px 24px; border-radius: 6px 6px 0 0; display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+  .section-header h2 { font-family: 'Lora', serif; font-size: 1.05rem; font-weight: 700; }
+  .section-header .section-en { font-size: 0.73rem; color: rgba(255,255,255,0.55); font-style: italic; margin-top: 2px; }
+  .section-label { background: var(--yellow); color: var(--navy); font-size: 0.62rem; font-weight: 700; padding: 2px 9px; border-radius: 10px; text-transform: uppercase; letter-spacing: 0.08em; white-space: nowrap; }
+
+  .subsection { scroll-margin-top: 130px; }
+  .subsection-header { background: var(--cream-dark); border-left: 4px solid var(--navy-mid); padding: 9px 18px; }
+  .subsection-header h3 { font-family: 'Lora', serif; font-size: 0.9rem; color: var(--navy); font-weight: 700; }
+  .subsection-header .sub-en { font-size: 0.68rem; color: var(--text-light); font-style: italic; margin-top: 1px; }
+
+  .two-col { display: grid; grid-template-columns: 1fr var(--sidebar-w); border: 1px solid rgba(0,0,0,0.1); background: #fff; }
+  .two-col.top-border { border-top: 1px solid rgba(0,0,0,0.1); }
+  .col-left { padding: 22px 26px; border-right: 1px solid rgba(0,0,0,0.08); }
+  .col-right { padding: 14px 16px; background: #f9f7f3; }
+
+  .en-text { font-family: 'Lora', serif; font-size: 0.91rem; line-height: 1.88; color: #2c2416; }
+  .en-text p { margin-bottom: 1em; }
+  .en-text p:last-child { margin-bottom: 0; }
+
+  .hl-yellow { background: var(--yellow-light); border-bottom: 2px solid var(--yellow-border); padding: 0 2px; border-radius: 2px; }
+  .hl-red { background: var(--red-light); border-bottom: 2px solid var(--red-border); padding: 0 2px; border-radius: 2px; }
+  .hl-blue { background: var(--blue-light); border-bottom: 2px solid var(--blue-border); padding: 0 2px; border-radius: 2px; }
+  .hl-green { background: var(--green-light); border-bottom: 2px solid var(--green-border); padding: 0 2px; border-radius: 2px; }
+  .hl-purple { background: var(--purple-light); border-bottom: 2px solid var(--purple-border); padding: 0 2px; border-radius: 2px; }
+
+  .anno-card { background: #fff; border-radius: 5px; border: 1px solid rgba(0,0,0,0.08); overflow: hidden; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .anno-card:last-child { margin-bottom: 0; }
+  .anno-head { display: flex; align-items: center; gap: 6px; padding: 7px 11px; font-size: 0.62rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; border-bottom: 1px solid rgba(0,0,0,0.06); }
+  .anno-body { padding: 9px 11px; font-size: 0.76rem; line-height: 1.58; color: var(--text-main); font-family: 'IBM Plex Sans SC', 'IBM Plex Sans', sans-serif; }
+  .anno-body .label { font-weight: 600; color: var(--navy); margin-right: 3px; }
+  .anno-section { margin-bottom: 7px; padding-bottom: 7px; border-bottom: 1px dashed rgba(0,0,0,0.07); }
+  .anno-section:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+
+  .ac-yellow .anno-head { background: var(--yellow-light); color: #7a5800; border-left: 3px solid var(--yellow-border); }
+  .ac-red .anno-head { background: var(--red-light); color: var(--red-border); border-left: 3px solid var(--red-border); }
+  .ac-blue .anno-head { background: var(--blue-light); color: var(--blue-border); border-left: 3px solid var(--blue-border); }
+  .ac-green .anno-head { background: var(--green-light); color: var(--green-border); border-left: 3px solid var(--green-border); }
+  .ac-purple .anno-head { background: var(--purple-light); color: var(--purple-border); border-left: 3px solid var(--purple-border); }
+
+  .vocab-box { background: var(--blue-light); border: 1px solid rgba(32,96,160,0.2); border-radius: 4px; padding: 7px 10px; margin-bottom: 8px; font-size: 0.72rem; font-family: 'IBM Plex Sans SC', 'IBM Plex Sans', sans-serif; }
+  .vocab-box .en-word { font-weight: 700; color: var(--blue); font-family: 'IBM Plex Sans', sans-serif; }
+  .vocab-box .cn-word { color: var(--text-main); font-weight: 600; }
+  .vocab-box .cn-def { color: var(--text-light); font-size: 0.68rem; margin-top: 2px; line-height: 1.4; }
+
+  .quote-block { margin: 0.9em 0; padding: 10px 14px; border-left: 3px solid var(--navy-mid); background: var(--cream-dark); font-size: 0.87rem; border-radius: 0 3px 3px 0; color: var(--text-main); line-height: 1.7; }
+
+  .arg-overview { background: var(--navy-dark); color: #fff; padding: 36px; margin: 48px 0; border-radius: 8px; scroll-margin-top: 130px; }
+  .arg-overview h2 { font-family: 'Lora', serif; font-size: 1.3rem; color: var(--yellow); margin-bottom: 4px; }
+  .arg-overview .subtitle { color: rgba(255,255,255,0.45); font-size: 0.75rem; margin-bottom: 28px; }
+  .arg-chain { display: flex; gap: 0; margin-bottom: 28px; flex-wrap: wrap; }
+  .arg-node { flex: 1; min-width: 130px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); padding: 14px 12px; position: relative; text-align: center; }
+  .arg-node:not(:last-child)::after { content: '→'; position: absolute; right: -12px; top: 50%; transform: translateY(-50%); color: var(--yellow); font-size: 1rem; z-index: 1; }
+  .arg-node .node-label { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--yellow); margin-bottom: 5px; font-weight: 600; }
+  .arg-node .node-cn { font-size: 0.78rem; color: #fff; font-family: 'IBM Plex Sans SC', sans-serif; line-height: 1.4; }
+  .arg-meta { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+  .arg-meta-item { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); padding: 13px; border-radius: 4px; }
+  .arg-meta-item .am-label { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 7px; font-weight: 600; }
+  .am-core .am-label { color: var(--yellow); } .am-strong .am-label { color: #66cc88; } .am-weak .am-label { color: #ff8888; }
+  .arg-meta-item .am-text { font-size: 0.78rem; color: rgba(255,255,255,0.83); line-height: 1.5; font-family: 'IBM Plex Sans SC', sans-serif; }
+
+  @media (max-width: 860px) {
+    :root { --sidebar-w: 100%; }
+    .two-col { grid-template-columns: 1fr; }
+    .col-left { border-right: none; border-bottom: 1px solid rgba(0,0,0,0.07); }
+    .arg-chain { flex-direction: column; }
+    .arg-node:not(:last-child)::after { content: '↓'; right: 50%; bottom: -12px; top: auto; transform: translateX(50%); }
+    .arg-meta { grid-template-columns: 1fr; }
+    .legend { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <div class="top-nav-inner">
+    <div class="nav-title-block">
+      <h1>《生态旅游：影响、潜力与可能性》双语批注版</h1>
+      <p>Ecotourism: Impacts, Potentials and Possibilities, 2nd Ed. | 生态旅游中英双语课 | 论证结构双栏分析</p>
+    </div>
+    <div class="legend">
+      <span class="legend-label">图例</span>
+      <span class="legend-item"><span class="legend-dot ld-yellow"></span>核心论点</span>
+      <span class="legend-item"><span class="legend-dot ld-red"></span>关键概念</span>
+      <span class="legend-item"><span class="legend-dot ld-blue"></span>实证数据</span>
+      <span class="legend-item"><span class="legend-dot ld-green"></span>让步/反驳</span>
+      <span class="legend-item"><span class="legend-dot ld-purple"></span>方法论</span>
+    </div>
+  </div>
+</nav>
+
+<nav class="chapter-nav">
+  <div class="chapter-nav-inner">
+    <a href="#intro">前言</a>
+    <a href="#ch-intro">导言</a>
+    <a href="#ch1">第一章</a>
+    <a href="#ch1-alt">替代旅游</a>
+    <a href="#ch1-nature">生态旅游本质</a>
+    <a href="#ch1-sus">可持续旅游</a>
+    <a href="#ch1-def">走向定义</a>
+    <a href="#ch2">第二章</a>
+    <a href="#ch2-human">人类-自然关系</a>
+    <a href="#ch2-value">价值伦理</a>
+    <a href="#ch2-eco">走向生态中心主义</a>
+    <a href="#ch2-sus">谁的可持续性</a>
+    <a href="#argument-map">论证总览</a>
+  </div>
+</nav>
+
+<div class="main-wrap">
+
+<!-- PREFACE -->
+<section class="section" id="intro">
+  <div class="section-header">
+    <div><h2>前言：第二版序言</h2><div class="section-en">Preface to the Second Edition</div></div>
+    <span class="section-label">背景铺垫</span>
+  </div>
+  <div class="subsection">
+    <div class="two-col top-border">
+      <div class="col-left">
+        <div class="en-text">
+          <p>It has now been 10 years since the first edition of <em>Ecotourism: Impacts, potentials and possibilities</em> was published. In that time ecotourism has been transformed both within tourism studies and more widely in the tourism industry. In the academic realm there has been an <span class="hl-blue">exponential growth in the publication of books on the topic of ecotourism</span>, and <span class="hl-blue">2002 was also proclaimed the International Year of Ecotourism by the United Nations</span>. The World Tourism Organization (WTO) Secretary-General noted the increasing growth of the ecotourism industry, and the prominent role ecotourism will play around the world in securing the future of the tourism industry.</p>
+          <p>There have also been significant developments in international environmental policy. The most prominent being <span class="hl-red">climate change</span>, which has now become <span class="hl-yellow">the single biggest issue on the international political agenda</span>. In February 2007, the <span class="hl-red">Intergovernmental Panel on Climate Change</span> released its findings indicating that there is a <span class="hl-blue">90% chance that global warming is caused by human-induced factors</span> and that it is the biggest environmental catastrophe to ever face the planet.</p>
+          <p>Confronted with these and other challenges <span class="hl-yellow">ecotourism has gone from fringe to significant player within the tourism industry</span>. The second edition comes at an important time as ecotourism seeks to cement its place within the industry as a viable alternative to more mainstream approaches.</p>
+        </div>
+      </div>
+      <div class="col-right">
+        <div class="anno-card ac-blue">
+          <div class="anno-head">📊 实证数据 Evidence</div>
+          <div class="anno-body">
+            <div class="anno-section"><span class="label">关键数据：</span>2002年联合国宣布"国际生态旅游年"；IPCC报告90%置信度——这两个权威机构的数据共同建立了"生态旅游的必要性"的外部权威支撑。</div>
+            <div class="anno-section"><span class="label">数据的功能：</span>不是为了展示生态旅游的成功，而是建立紧迫感：环境危机+旅游业增长，两者叠加使"如何旅游"成为政治问题。</div>
+          </div>
+        </div>
+        <div class="anno-card ac-yellow">
+          <div class="anno-head">💡 核心论点 Thesis</div>
+          <div class="anno-body">
+            <div class="anno-section"><span class="label">段落功能：</span>时代背景铺垫，建立论证的紧迫感与合法性。</div>
+            <div class="anno-section"><span class="label">论证技巧：</span>三重叠加——①学术繁荣 ②政治重视（联合国年份）③环境危机（IPCC数据），层层加码，最终导出"生态旅游从边缘走向中心"这一核心判断。</div>
+          </div>
+        </div>
+        <div class="vocab-box">
+          <div><span class="en-word">exponential growth</span> <span class="cn-word">指数级增长</span></div>
+          <div class="cn-def">以倍数方式快速扩大，意味着不是线性增长而是加速增长。用于强调生态旅游的爆发性发展。</div>
+        </div>
+        <div class="vocab-box">
+          <div><span class="en-word">Intergovernmental Panel on Climate Change (IPCC)</span> <span class="cn-word">政府间气候变化专门委员会</span></div>
+          <div class="cn-def">联合国下属科学机构，定期发布气候变化评估报告，是全球气候政策的权威科学依据。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRODUCTION -->
+<section class="section" id="ch-intro">
+  <div class="section-header">
+    <div><h2>导言：什么是生态旅游？</h2><div class="section-en">Introduction</div></div>
+    <span class="section-label">问题提出</span>
+  </div>
+
+  <div class="subsection">
+    <div class="subsection-header">
+      <h3>一、旅游业规模与生态旅游的位置</h3>
+      <div class="sub-en">Tourism's global scale and ecotourism's place in it</div>
+    </div>
+    <div class="two-col top-border">
+      <div class="col-left">
+        <div class="en-text">
+          <p><span class="hl-yellow">Ecotourism? A simple enough word but a complex and often contradictory concept.</span> Ecological travel is the 'next big thing'; the hippest way to travel is to backpack off the beaten track to experience 'nature' up close and personal. Or a way for tourism to market itself in the twenty-first century where environmental issues now top the international political agenda?</p>
+          <p>Whatever the origins, nature is calling and we are responding in droves. And ecotourists are leading the charge. But getting 'off the beaten track' often means that the track soon becomes a road, even a highway. And the beautiful wild spaces sought after by ecotourists are often fragile and sensitive to human impact.</p>
+          <p><span class="hl-yellow">One thing, however, is certain, the increasing global interest and exponential growth in ecotourism cannot simply be explained as another in a long line of recreational trends. Instead it reflects a fundamental shift in the way human beings view and engage with nature.</span></p>
+          <p>Tourism is currently <span class="hl-red">the world's largest industry</span>. The number of international arrivals shows an evolution from <span class="hl-blue">a mere 25 million in 1950 to an estimated 806 million in 2005, corresponding to an average annual growth rate of 6.5%</span> (WTO, 2007). <span class="hl-blue">Tourism has become the principle export earner for 83% of developing countries. For the world's 40 poorest countries, tourism is the second most important source of foreign exchange after oil</span> (Mastny, 2001).</p>
+        </div>
+      </div>
+      <div class="col-right">
+        <div class="anno-card ac-yellow">
+          <div class="anno-head">💡 核心论点 Thesis</div>
+          <div class="anno-body">
+            <div class="anno-section"><span class="label">全书第一个核心论断：</span>生态旅游不是时尚，而是人类自然观的"根本性转变"（fundamental shift）——这是整本书最基础的论点，后续所有章节都在为它提供证据和解释。</div>
+            <div class="anno-section"><span class="label">破立结构：</span>先提出两种流俗解读（时尚说/营销说），再用"One thing is certain"转折，提出更深刻的解释。这是典型的"破——立"论证策略。</div>
+          </div>
+        </div>
+        <div class="anno-card ac-blue">
+          <div class="anno-head">📊 实证数据 Evidence</div>
+          <div class="anno-body">
+            <div class="anno-section"><span class="label">数据的双重功能：</span>①证明旅游业体量巨大，因此其方向性选择意义重大；②发展中国家数据（83%依赖旅游出口）为后文第6章"社区利益"议题铺垫。</div>
+          </div>
+        </div>
+        <div class="vocab-box">
+          <div><span class="en-word">fundamental shift</span> <span class="cn-word">根本性转变</span></div>
+          <div class="cn-def">不是表面的消费趋势变化，而是人类看待和参与自然方式的深层次价值观转型。这是全书的核心主张。</div>
+        </div>
+        <div class="vocab-box">
+          <div><span class="en-word">principle export earner</span> <span class="cn-word">主要出口创汇来源</span></div>
+          <div class="cn-def">旅游业为发展中国家带来的外汇收入，说明旅游业不只是娱乐，更是经济发展的关键机制。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <div class="subsection-header">
+      <h3>二、"生态"词根——哲学根源与保护运动</h3>
+      <div class="sub-en">The "eco-" prefix — philosophical origins</div>
+    </div>
+    <div class="two-col top-border">
+      <div class="col-left">
+        <div class="en-text">
+          <p>So let us narrow the prism and focus on the prefix – <span class="hl-red">eco – from the word 'ecology' which itself is derived from the Greek word <em>oikos</em> meaning house or habitat</span>. The environment that we humans inhabit is, at its most fundamental, our home, our dwelling, or our life support.</p>
+          <p>Ecotourism's origins are deeply rooted in a form of environmental experience, as both a philosophy and an experience. <span class="hl-red">The environmental movement was born from the nature conservation movement</span>, which recognized that nature is essential to human well-being. In recent years this conviction has been strengthened by the scientific understanding that <span class="hl-yellow">biodiversity is essential to not only well-being, but to human survival also.</span></p>
+          <p>Many have also articulated the need for nature to be conserved regardless of any utility or value to humans but because <span class="hl-yellow">nature has a right to exist and conversely the human species does not have the right to determine the fate of all other species</span> (Nash, 1989).</p>
+          <p>But tourism involves travel away from our origin, from our individual homes, into dwellings that are not our own. <span class="hl-red">The world is a stage across which wealthy people stride, relentlessly striving to satisfy our desire, traveling across the globe to experience these 'others' – cultures, nature, sights, sounds and smells.</span></p>
+        </div>
+      </div>
+      <div class="col-right">
+        <div class="anno-card ac-red">
+          <div class="anno-head">🔑 关键概念 Key Term</div>
+          <div class="anno-body">
+            <div class="anno-section"><span class="label">oikos（家/栖息地）：</span>这个词源分析极为重要。"生态旅游"字面意义是"在地球这个家中旅行"，暗含对"家"负有责任的伦理含义，与"征服/消费自然"的大众旅游逻辑相对立。</div>
+            <div class="anno-section"><span class="label">保护运动谱系：</span>环境运动→自然保护运动→生物多样性科学，这条历史线索说明生态旅游不是孤立现象，而是有深厚思想渊源。</div>
+          </div>
+        </div>
+        <div class="anno-card ac-yellow">
+          <div class="anno-head">💡 核心论点 Thesis</div>
+          <div class="anno-body">
+            <div class="anno-section"><span class="label">两个核心主张：</span>①生物多样性是人类生存（不只是生活质量）的基础——将保护的必要性从"应该"升级为"必须"；②自然有权利存在，人类无权决定其他物种命运——这是生态中心主义立场，第二章将深入阐发。</div>
+          </div>
+        </div>
+        <div class="vocab-box">
+          <div><span class="en-word">biodiversity</span> <span class="cn-word">生物多样性</span></div>
+          <div class="cn-def">物种、基因和生态系统层面的多样性。书中将其定位为人类生存基础，而非单纯的美学或娱乐资源。</div>
+        </div>
+        <div class="vocab-box">
+          <div><span class="en-word">conservationist vs. environmentalist</span> <span class="cn-word">自然保护主义者 vs. 环保主义者</span></div>
+          <div class="cn-def">前者侧重资源的保存管理（理性利用），后者侧重防止污染破坏（权利主张）。两者目标相近但哲学基础不同。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTER 1 -->
+<section class="section" id="ch1">
+  <div class="section-header">
+    <div><h2>第一章：出发——勘探地形</h2><div class="section-en">Chapter 1: Departure: Surveying the Ground</div></div>
+    <span class="section-label">概念辨析</span>
+  </div>
+
+  <div class="subsection" id="ch1-alt">
+    <div class="subsection-header">
+      <h3>一、替代旅游的概念辨析</h3>
+      <div class="sub-en">The Ecotourism Alternative</div>
+    </div>
+    <div class="two-col top-border">
+      <div class="col-left">
+        <div class="en-text">
+          <p>Despite the conflicting interpretations and convenient deployment of the term 'ecotourism' within the tourism industry, one thing is certain, <span class="hl-yellow">the increasing global interest and growth in ecotourism cannot simply be explained as another in a long line of recreational trends. Instead it reflects a fundamental shift in the way human beings view and engage with nature and tourism</span> (Chafe, 2005, 2007).</p>
+          <p>The word 'alternative' logically implies its opposite. <span class="hl-red">'Alternative tourism' is contrary to that which is seen as negative or detrimental about conventional tourism: it is characterized by its attempt at minimizing the perceived negative environmental and socio-cultural impacts of people at leisure</span> in the promotion of radically different approaches to conventional tourism. Therefore the terminology of alternative and mass tourism is mutually interdependent, each relying on a series of value laden judgments.</p>
+          <p>As to the specific forms of AT, Mieczkowski (1995) distinguishes such forms as cultural, educational, scientific, adventure, and agri-tourism. Significantly, there is some overlap with CMT but the main criteria of distinction are the scale and character of the impacts.</p>
+          <p>Thus, in its most general sense, <span class="hl-yellow">alternative tourism can be broadly defined as a form of tourism that sets out to be consistent with natural, social, and community values and which allows both hosts and guests to enjoy positive and worthwhile interaction and shared experiences.</span></p>
+          <p>Against the above broad characteristics we can begin to see ecotourism as a form of alternative tourism. In its simplest terms, <span class="hl-yellow">ecotourism can be generally described as a low key, minimal impact; interpretative tourism where conservation, understanding, and appreciation of the environment and cultures visited are sought.</span></p>
+        </div>
+      </div>
+      <div class="col-right">
+        <div class="anno-card ac-yellow">
+          <div class="anno-head">💡 核心论点 Thesis</div>
+          <div class="anno-body">
+            <div class="anno-section"><span class="label">逻辑链：</span>大众旅游有弊端→替代旅游是对弊端的回应→生态旅游是替代旅游的一种→因此生态旅游有其存在的哲学必要性。这是演绎推理的典型应用。</div>
+            <div class="anno-section"><span class="label">生态旅游简明定义：</span>低调+低影响+有解说功能，目标是保护与理解所访问的自然和文化。这是第1章最重要的操作性定义。</div>
+          </div>
+        </div>
+        <div class="anno-card ac-red">
+          <div class="anno-head">🔑 关键概念 Key Term</div>
+          <div class="anno-body">
+            <div class="anno-section"><span class="label">替代旅游五大特征（Table 1.1）：</span>①保护旅游资源基础 ②促进基于当地特色的发展 ③支持不超出承载力的基础设施 ④最小化环境影响 ⑤强调文化可持续性</div>
+            <div class="anno-section"><span class="label">互相依存关系：</span>"替代旅游"和"大众旅游"是一对互相定义的概念，理解其中一个必须参照另一个——这说明生态旅游不能孤立地定义，始终是在与大众旅游的对比中获得意义。</div>
+          </div>
+        </div>
+        <div class="vocab-box">
+          <div><span class="en-word">Alternative Tourism (AT) vs. Conventional Mass Tourism (CMT)</span> <span class="cn-word">替代旅游 vs. 传统大众旅游</span></div>
+          <div class="cn-def">AT=小规模、低密度、特殊兴趣群体、高教育程度；CMT=大规模、标准化、高密度。两者在规模与影响性质上形成对比。</div>
+        </div>
+        <div class="vocab-box">
+          <div><span class="en-word">interpretative tourism</span> <span class="cn-word">解说性旅游</span></div>
+          <div class="cn-def">通过讲解帮助游客理解自然和文化意义的旅游方式，是生态旅游区别于普通自然旅游的核心特征。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="subsection" id="ch1-nature">
+    <div class="subsection-header">
+      <h3>二、生态旅游本质——三种与自然的关系层次</h3>
+      <div class="sub-en">The Nature of Ecotourism</div>
+    </div>
+    <div class="two-col top-border">
+      <div class="col-left">
+        <div class="en-text">
+          <p><span class="hl-blue">Ecotourism/nature-based tourism has become the fastest growing sector of the tourism industry growing 3 times faster than the industry as a whole</span> (Huybers and Bennett, 2002; International Ecotourism Society, 2008). There can be no doubting of the increasing trends in environmental concern allied with the historically prevalent trend of travel as a form of escape to nature.</p>
+          <p>There are a number of dimensions to nature-based tourism. All forms of travel to natural areas are not necessarily ecotourism, but this provides a useful step in differentiating nature-based tourism from ecotourism and gives us a number of levels at which to distinguish the relationship between specific tourism activities and nature:</p>
+          <div class="quote-block">
+            <strong>① 依赖自然（Dependent on nature）：</strong>没有自然环境就无法进行的活动（如观鸟、潜水）<br><br>
+            <strong>② 由自然增益（Enhanced by nature）：</strong>在自然环境中更为愉悦的活动（如露营）<br><br>
+            <strong>③ 自然只是附带背景（Nature is incidental）：</strong>在任何环境中都可进行的活动
+          </div>
+          <p><span class="hl-yellow">However, fundamental concerns of ecotourism include environmental degradation, impact on local communities, and the need for high-quality tourism management for achievable sustainability.</span></p>
+          <p>Within this auspice we find <span class="hl-red">'Low Impact Tourism' (LIT)</span> which focuses on establishing indigenous natural resource management through private sector incentives. <span class="hl-purple">Being supply-driven, LIT places control and regulation of tourism development into the hands of the destination country, rather than the travel and tour operators who are reliant on a demand-driven rationale.</span></p>
+          <p>The goals of LIT then are to establish, coordinate, and mutually support conservation and tourism policy, to fund parks' development and management and foster indigenous involvement of protected areas.</p>
+        </div>
+      </div>
+      <div class="col-right">
+        <div class="anno-card ac-purple">
+          <div class="anno-head">🔬 方法论 Methodology</div>
+          <div class="anno-body">
+            <div class="anno-section"><span class="label">三层次分析框架：</span>这是一个分类学工具（taxonomic framework），用于区分真正的生态旅游（依赖自然）与一般自然旅游（附带背景）。考试中可用此框架分析具体案例。</div>
+            <div class="anno-section"><span class="label">供给驱动 vs. 需求驱动：</span>LIT/生态旅游=供给侧控制（按环境承载力决定接待量）；大众旅游=需求侧驱动（按市场需求无限扩张）。这一对立贯穿全书，第8章有详细讨论。</div>
+          </div>
+        </div>
+        <div class="anno-card ac-blue">
+          <div class="anno-head">📊 实证数据 Evidence</div>
+          <div class="anno-body">
+            <div class="anno-section"><span class="label">增速数据的双重含义：</span>生态旅游增速是整个旅游业的3倍——既说明其受欢迎程度，也意味着若管理不当，其负面影响也会以3倍速度累积。这为后文"可持续管理"的必要性提供了数量依据。</div>
+          </div>
+        </div>
+        <div class="vocab-box">
+          <div><span class="en-word">supply-driven vs. demand-driven</span> <span class="cn-word">供给驱动 vs. 需求驱动</span></div>
+          <div class="cn-def">供给驱动：由目的地环境承载力决定旅游量。需求驱动：由市场需求决定供给。生态旅游的理想是供给驱动，实践中常被需求逻辑侵蚀。</div>
+        </div>
+        <div class="vocab-box">
+          <div><span class="en-word">Low Impact Tourism (LIT)</span> <span class="cn-word">低影响旅游</span></div>
+          <div class="cn-def">强调目的地国家对旅游发展的控制权、本地资源自主管理、小规模运营。是生态旅游的一种操作化形式。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="subsection" id="ch1-sus">
+    <div class="subsection-header">
+      <h3>三、可持续旅游——保护自然的基础</h3>
+      <div class="sub-en">Sustainable Tourism: Conserving Nature's Base</div>
+    </div>
+    <div class="two-col top-border">
+      <div class="col-left">
+        <div class="en-text">
+          <p>The natural environment is central to ecotourism. The conservation of natural areas and sustainable resource management are therefore essential for planning, development, and management of ecotourism. Valentine (1993) draws attention to the 'two-way interaction' between ecotourism and the environment upon which it depends: <span class="hl-yellow">one characteristic of ecotourism is that it is both contributory to conservation as well as enjoyment of nature, thus merging these two dimensions.</span></p>
+          <p>Therefore an essential feature of ecotourism is <span class="hl-red">sustainability</span> – and sustainable development by implication. The Brundtland Report introduced the concept of sustainable development, defining it as <span class="hl-red">'development that meets the needs of the present without compromising the ability of future generations to meet their own needs'</span> (Mieczkowski, 1995: 457).</p>
+          <p>Butler defines environmentally sustainable tourism as follows:</p>
+          <div class="quote-block">tourism which is developed and maintained in an area (community, environment) in such a manner and at such a scale that it remains viable over an infinite period and does not degrade or alter the environment (human and physical) in which it exists to such a degree that it prohibits the successful development and well being of other activities and processes. (1991: 29)</div>
+          <p>In a later article Butler (1999) suggested that sustainable 'tourism' is just one component of development in general and that it needs to be thought of as one element that is a part of a larger mix. <span class="hl-green">Thus sustainable tourism is not automatically the same as tourism developed in line with the principles of sustainable development.</span></p>
+          <p>According to The World Tourism Organization (WTO, 2004) sustainable tourism should:<br>
+          <span class="hl-blue">1. Make optimal use of environmental resources that constitute a key element in tourism development, maintaining essential ecological processes and helping to conserve natural heritage and biodiversity.<br>
+          2. Respect the socio-cultural authenticity of host communities, conserve their built and living cultural heritage and traditional values.<br>
+          3. Ensure viable, long-term economic operations, providing socio-economic benefits to all stakeholders that are fairly distributed.</span></p>
+        </div>
+      </div>
+      <div class="col-right">
+        <div class="anno-card ac-red">
+          <div class="anno-head">🔑 关键概念 Key Term</div>
+          <div class="anno-body">
+            <div class="anno-section"><span class="label">布伦特兰报告定义（必记）：</span>"满足当代人需求，同时不损害后代满足自身需求的能力。"这是国际可持续发展政策的基石定义，生态旅游的可持续性要求以此为标准。</div>
+            <div class="anno-section"><span class="label">WTO三要素（必记）：</span>①环境资源利用最优化+维持生态过程 ②尊重主人社区的社会文化真实性 ③确保所有利益相关者公平分享经济收益。这三条是考试中经常出现的判断标准。</div>
+          </div>
+        </div>
+        <div class="anno-card ac-green">
+          <div class="anno-head">🔄 让步/反驳 Concession</div>
+          <div class="anno-body">
+            <div class="anno-section"><span class="label">重要区分：</span>Butler的让步非常关键——"可持续旅游"≠"按可持续发展原则发展的旅游"。前者只是旅游业内部的可持续，后者要求与整个社会经济的可持续发展整合。这一区分防止了概念的滥用。</div>
+          </div>
+        </div>
+        <div class="vocab-box">
+          <div><span class="en-word">sustainability</span> <span class="cn-word">可持续性</span></div>
+          <div class="cn-def">在不破坏未来资源基础的前提下满足当前需求。在旅游语境中，指旅游活动不超过自然、社会、文化的承载能力。</div>
+        </div>
+        <div class="vocab-box">
+          <div><span class="en-word">socio-cultural authenticity</span> <span class="cn-word">社会文化真实性</span></div>
+          <div class="cn-def">主人社区的文化习俗、传统生活方式和社会结构的真实性，不应因旅游业的商业压力而被扭曲或商品化。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="subsection" id="ch1-def">
+    <div class="subsection-header">
+      <h3>四、走向定义——生态旅游的四要素</h3>
+      <div class="sub-en">Moving Toward a Definition</div>
+    </div>
+    <div class="two-col top-border">
+      <div class="col-left">
+        <div class="en-text">
+          <p><span class="hl-yellow">Ecotourism then includes four fundamental elements:</span></p>
+          <div class="quote-block">
+            <strong>① 旅行/移动（Travel/Movement）</strong><br>
+            This travel should be restricted to relatively undisturbed or protected natural areas. Protected areas are a critical ingredient in ecotourism because of their natural, historical, and cultural richness.<br>
+            <em>旅行应限于相对未受干扰或受保护的自然区域。</em><br><br>
+            <strong>② 以自然为基础（Nature-based）</strong><br>
+            Activities such as business travel, travel to cities, conventional beach holidays, and sporting holidays cannot be considered as ecotourism as their focus is not primarily on an experience based on the natural environment. The most common denominator is that it is nature-based (Cater, 2006).<br>
+            <em>以自然体验为核心，这是所有定义中最共同的分母。</em><br><br>
+            <strong>③ 以保护为导向（Conservation-led）</strong><br>
+            Ecotourism includes cultural and environmental awareness, environmental conservation, and empowerment of local people upon whose resources ecotourism depends. Ecotourism 'promotes a greater understanding and respect of cultures, heritage, and the natural environment – and people usually protect what they respect' (Richardson, 1991:244).<br>
+            <em>生态旅游必须对目的地保护产生积极贡献，并赋权当地社区。</em><br><br>
+            <strong>④ 教育功能（Educational role）</strong><br>
+            The ecotourist generally has an awareness of nature-related issues and a desire to learn more about the environment (Galley and Clifton, 2004). Ecotourism operators may therefore be expected to provide an appropriate level of environmental and cultural interpretation.<br>
+            <em>生态旅游具有教育功能，不仅针对游客，也针对运营商和当地社区。</em>
+          </div>
+          <p><span class="hl-yellow">Ecotourism then has the potential to be a vehicle for the enhancement of an understanding of environmental values, supportive of local communities' economies, and sense of cultural identity, as well as an activity which has arisen due to a fundamental shift in the way nature is viewed by the society.</span></p>
+        </div>
+      </div>
+      <div class="col-right">
+        <div class="anno-card ac-yellow">
+          <div class="anno-head">💡 核心论点 Thesis — 最重要考点</div>
+          <div class="anno-body">
+            <div class="anno-section"><span class="label">四要素（必须记住）：</span>①自然地区旅行 ②以自然为核心 ③有益于保护+赋权社区 ④教育功能（游客+运营商+社区）。缺少任一要素都不构成真正的生态旅游。</div>
+            <div class="anno-section"><span class="label">段落功能：</span>本段是第一章的论证结论，把所有前期讨论整合为一个可操作的定义框架。</div>
+            <div class="anno-section"><span class="label">潜在漏洞：</span>这四要素仍较理想化，未提供可量化的标准（如何判断"积极贡献于保护"？），为第3、8章讨论政策执行和认证制度留下空间。</div>
+          </div>
+        </div>
+        <div class="anno-card ac-red">
+          <div class="anno-head">🔑 关键概念 Key Term</div>
+          <div class="anno-body">
+            <div class="anno-section"><span class="label">Ceballos-Lascurain定义的贡献：</span>他是"生态旅游"一词的发明者（1981年西班牙语turismo ecológico）。他的定义强调"自然环境是主要焦点"，为后续所有定义提供了起点。</div>
+          </div>
+        </div>
+        <div class="vocab-box">
+          <div><span class="en-word">empowerment of local people</span> <span class="cn-word">赋权当地社区</span></div>
+          <div class="cn-def">让当地居民在旅游决策中有话语权、在经济收益中有份额、在文化传承中有自主权。是生态旅游区别于传统旅游的社会正义维度。</div>
+        </div>
+        <div class="vocab-box">
+          <div><span class="en-word">interpretation</span> <span class="cn-word">解说/阐释</span></div>
+          <div class="cn-def">不是简单地传递事实信息，而是揭示自然和文化的意义与关联，激发游客的情感认同和环保行为（第5章有专章讨论）。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTER 2 -->
+<section class="section" id="ch2">
+  <div class="section-header">
+    <div><h2>第二章：生态旅游是一种哲学——哪种哲学？</h2><div class="section-en">Chapter 2: If Ecotourism is Not Just an Activity But a Philosophy, Which Philosophy?</div></div>
+    <span class="section-label">哲学基础</span>
+  </div>
+
+  <div class="subsection" id="ch2-human">
+    <div class="subsection-header">
+      <h3>一、人类-自然关系的历史脉络</h3>
+      <div class="sub-en">Human Nature — History of human-nature relationship</div>
+    </div>
+    <div class="two-col top-border">
+      <div class="col-left">
+        <div class="en-text">
+          <p>Throughout human history it has been nature that has provided both the raw material and inspiration for human existence. However, it was the Scottish empiricist philosopher, <span class="hl-red">John Locke (1632–1704)</span> who expresses most succinctly our modern inheritance of the natural world in claiming that <span class="hl-yellow">everything in nature is waste until people transform it into useable things of value</span> (Locke, 1841). It is an ethos that western societies have embraced with unrestrained enthusiasm.</p>
+          <p>The environmental devastation that has resulted from this impetus to 'develop' and use nature for our own material ends has now been recognized as <span class="hl-yellow">the most significant political issue of the twenty-first century.</span> It is indeed a grim harvest to reap and is a product of our own making — What we do about ecology depends on our ideas of the human–nature relationship.</p>
+          <p><span class="hl-green">However, Holden (2005) laments that although the presence of a conservation ethic is resulting in a move to resource-conserving behavior; there is still a lack of recognition of the intrinsic value of nature.</span></p>
+          <p>Facts, figures and scientific data in themselves do not seem to have been enough to challenge the global trends of environmental decline. Instead: <span class="hl-blue">"Numerous theoretical frameworks have been developed to explain the gap between the possession of environmental knowledge and environmental awareness, and displaying pro-environmental behaviour. Although many hundreds of studies have been undertaken, no definitive explanation has yet been found."</span> (Kollmuss and Agyeman, 2002: 239)</p>
+          <p>In December 1987, the Nobel Prize for Economics was awarded to Robert Solow for his theory of economic growth. Of particular interest was Solow's overt premise: <span class="hl-red">the dispensability of nature</span>. In his own words: <span class="hl-blue">'[t]he world can, in effect, get along without natural resources, so exhaustion is just an event, not a catastrophe'</span> (Shiva, 1989: 219).</p>
+        </div>
+      </div>
+      <div class="col-right">
+        <div class="anno-card ac-yellow">
+          <div class="anno-head">💡 核心论点 Thesis</div>
+          <div class="anno-body">
+            <div class="anno-section"><span class="label">洛克命题作为批判靶点：</span>"自然是废物直到被人类改造"——这代表西方主流价值观（人类中心主义），是作者整个第二章要质疑和超越的立场。</div>
+            <div class="anno-section"><span class="label">知识-行为缺口（Knowledge-Action Gap）：</span>这是本章最重要的论证之一。仅靠数据和科学知识无法改变行为，因此需要的是价值观转变——这正是生态旅游教育功能的意义所在，也是为什么第5章专门讨论"解说"。</div>
+          </div>
+        </div>
+        <div class="anno-card ac-green">
+          <div class="anno-head">🔄 让步/反驳 Concession</div>
+          <div class="anno-body">
+            <div class="anno-section"><span class="label">让步结构：</span>承认"保护意识已有所提升"，但紧接用"however"转折：内在价值仍未被承认。这是典型的让步-反驳（concession-rebuttal）结构，承认进步的同时指出不足。</div>
+            <div class="anno-section"><span class="label">诺贝尔奖反例：</span>引用Solow"自然可有可无"的经济学主流观点，作为"即使是最高学术权威仍持人类中心主义"的证据，反衬问题的严重性。</div>
+          </div>
+        </div>
+        <div class="vocab-box">
+          <div><span class="en-word">intrinsic value</span> <span class="cn-word">内在价值</span></div>
+          <div class="cn-def">事物因其自身存在而具有的价值，不依赖于对人类是否有用。与"工具价值/instrumental value"相对。这是第二章最核心的哲学概念。</div>
+        </div>
+        <div class="vocab-box">
+          <div><span class="en-word">dispensability of nature</span> <span class="cn-word">自然的可有可无性</span></div>
+          <div class="cn-def">索洛的经济学立场：自然资源可被技术和人造资本替代，因此耗尽自然资源并非灾难。是人类中心主义在经济学中的极端表达。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="subsection" id="ch2-value">
+    <div class="subsection-header">
+      <h3>二、价值对立——工具伦理与自然伦理</h3>
+      <div class="sub-en">Exchanging Value(s) — Two competing ethics</div>
+    </div>
+    <div class="two-col top-border">
+      <div class="col-left">
+        <div class="en-text">
+          <p>Questions of value are central to the considerations of the (often competing) conceptions of, and practices, toward the natural world. <span class="hl-yellow">We must stop seeing it as simply a set of instrumental values (resources) and be willing to recognize that nature has intrinsic values</span> (Larr`ere and Larr`ere, 2007).</p>
+          <p>Godfrey-Smith (1980) identifies two primary ways in which value is assessed in western society. If the value that something is said to hold is a means to a valued end then it is designated as being of <span class="hl-red">'instrumental' value</span>. <span class="hl-red">'Intrinsic value'</span> on the other hand is value that exists in its own right, for its own sake.</p>
+          <p>What is central here is the ethic that such ideas and values underpin:</p>
+          <div class="quote-block">
+            <strong>使用伦理（An ethic of 'use'）：</strong><br>
+            Nature is viewed predominantly as a set of resources which humanity is free to employ for its own distinct ends. It is an instrumental and <em>anthropocentric</em> view.<br>
+            <em>自然=供人使用的资源集合，人类中心主义/工具论立场。</em><br><br>
+            <strong>自然伦理（An ethic 'of' nature）：</strong><br>
+            Holds that non-human entities are of equal value with the human species. It is broadly intrinsic and <em>ecocentric</em>.<br>
+            <em>非人类存在与人类具有同等价值，生态中心主义/内在论立场。</em>
+          </div>
+          <p>Godfrey-Smith (1980) places instrumental justifications for nature conservation in four main categories:</p>
+          <div class="quote-block">
+            <strong>① 大教堂论证（Cathedral）：</strong>自然提供精神复原与审美愉悦<br>
+            <strong>② 粮仓论证（Silo）：</strong>自然是遗传多样性的储备库<br>
+            <strong>③ 实验室论证（Laboratory）：</strong>自然具有科学研究价值<br>
+            <strong>④ 体育馆论证（Gymnasium）：</strong>自然提供旅游与休闲价值
+          </div>
+          <p><span class="hl-green">The 'anthropocentric morality' and its ethic of use are difficult for us to argue against. The notion that a wilderness or natural areas might have intrinsic value in itself is often dismissed as a transparent example of wishful thinking</span> (Messer and Mosley, 1980). For in the great majority of cases it is an instrumental justification that is used to argue for the preservation and conservation of nature.</p>
+        </div>
+      </div>
+      <div class="col-right">
+        <div class="anno-card ac-red">
+          <div class="anno-head">🔑 关键概念 Key Term — 全书核心分析框架</div>
+          <div class="anno-body">
+            <div class="anno-section"><span class="label">最重要的概念对：</span>工具价值/内在价值，以及对应的人类中心主义/生态中心主义，是第二章（乃至全书哲学讨论）的核心框架。
+            <br><br>工具价值→人类中心主义→大众旅游逻辑<br>
+            内在价值→生态中心主义→生态旅游理想</div>
+            <div class="anno-section"><span class="label">四种保护论证的局限：</span>Godfrey-Smith的四种论证（大教堂/粮仓/实验室/体育馆）都是工具性的——都以"对人类有用"为保护理由。作者指出：这是目前保护政策的现实，但不够——真正的生态旅游需要承认内在价值。</div>
+          </div>
+        </div>
+        <div class="anno-card ac-green">
+          <div class="anno-head">🔄 让步/反驳 Concession</div>
+          <div class="anno-body">
+            <div class="anno-section"><span class="label">重要让步：</span>作者坦承人类中心主义/工具伦理"很难反驳"，而内在价值论"常被视为一厢情愿"——这种自我批评式的诚实增强了后续论证的可信度。后文通过深生态学和利奥波德的论证来回应这一批评。</div>
+          </div>
+        </div>
+        <div class="vocab-box">
+          <div><span class="en-word">anthropocentrism</span> <span class="cn-word">人类中心主义</span></div>
+          <div class="cn-def">以人类为道德世界的中心，自然的价值由其对人类的效用决定。西方哲学和经济学的主流立场。</div>
+        </div>
+        <div class="vocab-box">
+          <div><span class="en-word">ecocentrism</span> <span class="cn-word">生态中心主义</span></div>
+          <div class="cn-def">以整个生态系统为中心的价值观，认为所有生命形式（包括无生命的自然）都有内在价值，人类只是生态系统的一部分。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="subsection" id="ch2-eco">
+    <div class="subsection-header">
+      <h3>三、走向生态中心主义——深生态学与利奥波德土地伦理</h3>
+      <div class="sub-en">Toward Ecocentrism: Modern Roots — Deep Ecology and Leopold</div>
+    </div>
+    <div class="two-col top-border">
+      <div class="col-left">
+        <div class="en-text">
+          <p>The serious questioning of anthropocentrism was not taken up significantly until the early 1960s and 1970s, provoked in large part by the influence of <span class="hl-red">Rachel Carson's (1962) seminal book 'Silent Spring'</span> and <span class="hl-red">Lynn White's (1967) 'The Historical Roots of Our Ecologic Crisis'</span>.</p>
+          <p>Those who dismiss that nature has an intrinsic value argue that such a position is not rational. Such a perspective is often referred to as <span class="hl-red">technocentrism, or technological environmentalism</span> (Pepper, 1996). For the technocentric, it is the function of economic growth and technological advancement to provide material well-being for humanity. Conservation, when advocated, is seen as the domain of efficient environmental management.</p>
+          <p>This line of thought moves us into the ideas surrounding <span class="hl-red">'deep ecology'</span>. <span class="hl-yellow">Deep ecology is a comprehensive philosophical worldview that believes a harmonious relationship with nature can be made available, through extending care from the human to the non-human world.</span> Deep ecology takes a holistic view of nature in which the human being, through the 'self', is intrinsically connected to all life. No absolute boundaries exist between humanity and nature.</p>
+          <p>This idea can be extended to ecotourist's level of commitment to environmentalism so that some ecotourists would be considered to be <span class="hl-red">'light green'</span> while others would be <span class="hl-red">'dark green'</span>. Most ecotourists could be classed as light green insofar as they are interested in sustainability and may undertake some efforts to behave in an environmentally responsible manner, however, in the end they will put comfort over conservation.</p>
+          <p><span class="hl-red">Aldo Leopold (1886–1948)</span> can be considered one of the first modern deep ecologists. For Leopold our relation to the land should not be governed solely by economics: <span class="hl-yellow">'our basic weakness in a conservation system based wholly on economic motives is that most members of the land community have no economic value'</span> (1966: 20).</p>
+          <p>A land ethic according to Leopold is based on the principle that each individual organism is a member of a complex community of interrelated parts. <span class="hl-yellow">Processes that preserved the integrity, stability and beauty of the biotic community are ethically the ones to pursue.</span></p>
+          <p>Perhaps the most serious obstacle impeding the evolution of a land ethic is that western societies are headed away from an intimate connection to land through the dominance of a predominantly individualistic and economic value system.</p>
+        </div>
+      </div>
+      <div class="col-right">
+        <div class="anno-card ac-red">
+          <div class="anno-head">🔑 关键概念 Key Term</div>
+          <div class="anno-body">
+            <div class="anno-section"><span class="label">深生态学四原则（考试重点）：</span>①深入质疑人类-自然关系 ②伦理形而上学而非环境伦理 ③描述性与规范性并重的政治运动 ④应对自然破坏的行动主义</div>
+            <div class="anno-section"><span class="label">浅绿 vs. 深绿：</span>这一区分对理解生态游客类型（第9章）至关重要。浅绿=关心可持续性但舒适>保护；深绿=保护>舒适，做出实质性环境承诺。大多数"生态游客"实际上是浅绿的。</div>
+            <div class="anno-section"><span class="label">利奥波德土地伦理的核心洞见：</span>经济体系无法为自然提供充分保护，因为大多数物种"没有经济价值"（如细菌、昆虫）。因此需要超越经济逻辑的伦理——"保护生物群落的完整性、稳定性与美"作为道德标准。</div>
+          </div>
+        </div>
+        <div class="vocab-box">
+          <div><span class="en-word">deep ecology</span> <span class="cn-word">深生态学</span></div>
+          <div class="cn-def">认为生态危机的根源是人类世界观错误，需要根本改变人与自然的关系，而非仅通过技术修补。与只关注污染控制的"浅生态学"相对。</div>
+        </div>
+        <div class="vocab-box">
+          <div><span class="en-word">technocentrism</span> <span class="cn-word">技术中心主义</span></div>
+          <div class="cn-def">相信技术和经济增长可解决所有环境问题，不需要改变基本的人类-自然关系。是深生态学/生态中心主义的对立立场。</div>
+        </div>
+        <div class="vocab-box">
+          <div><span class="en-word">land ethic (Leopold)</span> <span class="cn-word">土地伦理</span></div>
+          <div class="cn-def">人类对土地（包括土壤、水、植物、动物）负有道德责任，"生物群落的完整性、稳定性与美"是伦理判断的标准——而非经济收益。</div>
+        </div>
+        <div class="vocab-box">
+          <div><span class="en-word">biotic community</span> <span class="cn-word">生物群落</span></div>
+          <div class="cn-def">由相互依存的生物（包括人类）构成的生态系统整体。利奥波德认为人类是其成员而非主人。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="subsection" id="ch2-sus">
+    <div class="subsection-header">
+      <h3>四、谁的可持续性？公地悲剧与资源管理伦理</h3>
+      <div class="sub-en">Whose Sustainability? Tragedy of the Commons and ethics of resource management</div>
+    </div>
+    <div class="two-col top-border">
+      <div class="col-left">
+        <div class="en-text">
+          <p>The concept of sustainability has become a mediating term in bridging the ideological and political differences between the environmental and development lobbies, a bridge between the fundamentally opposed paradigms of eco and anthropocentrism.</p>
+          <p>According to <span class="hl-red">Garrett Hardin's (1968) article that introduces the 'Tragedy of the Commons'</span>, <span class="hl-yellow">all resources owned in common – air, oceans, fish, bushland, etc. – are or eventually will be overexploited. The rational individual has the incentive to take as much as possible before someone else does. No one is motivated to take responsibility for the resource. Because they belong to everyone, no one protects it.</span></p>
+          <p>Applying these ideas to tourism suggests that each tour company would seek to maximize their own gain, and become locked into a system that compels them to 'increase his herd' (maximize their profit by increasing the number of tourists) without limit, in a tourism system which is finite.</p>
+          <p>Hardin (1968) proposes that to control this kind of undisciplined exploitation, <span class="hl-purple">an attitude of temperance rather than prohibition is required, through mediation of administrative law and 'coercion' (via taxes, incentives and other biased options).</span></p>
+          <p><span class="hl-yellow">The commons argument has significant implications for ecotourism. The commons or destination area can only be justifiably used under low-population (visitor) densities.</span> The only way to preserve and nurture other more precious freedoms is by relinquishing the freedom to visit or the number of visitors.</p>
+          <p><span class="hl-green">Mistakenly, ecocentrism is often criticized as a hands off, 'wishful thinking' approach which is ideal yet impractical to implement on any real level.</span> However, it is important here to express ecocentrism's centrality for ecotourism clearly. <span class="hl-yellow">Ecocentrism as an approach to management would argue that protected areas can exist because they have a value in and for themselves.</span></p>
+          <p>These are the radical views of a continuum of perceptions, yet they deal with the same biosphere. What place and role does the market have in a finite natural world? Conversely, what is the place of the natural environment in an economically rationalist world?</p>
+        </div>
+      </div>
+      <div class="col-right">
+        <div class="anno-card ac-yellow">
+          <div class="anno-head">💡 核心论点 Thesis</div>
+          <div class="anno-body">
+            <div class="anno-section"><span class="label">"公地悲剧"的旅游应用：</span>每家旅游公司都是"理性个体"，都有动机最大化游客数量，集体结果是目的地的毁灭——这为"需要外部管制"提供了经济学基础，超越了纯道德呼吁。</div>
+            <div class="anno-section"><span class="label">政策含义：</span>不是禁止旅游，而是通过税收、许可证、限额等手段控制数量，同时确保收益回流保护目的。这为第3章的政策讨论奠定理论基础。</div>
+            <div class="anno-section"><span class="label">保护区内在价值论：</span>即使无法说服所有人接受内在价值论，作者仍坚持：生态中心主义视角为保护区管理提供了独特的哲学基础——保护区的存在不需要经济理由。</div>
+          </div>
+        </div>
+        <div class="anno-card ac-green">
+          <div class="anno-head">🔄 让步/反驳 Concession</div>
+          <div class="anno-body">
+            <div class="anno-section"><span class="label">批评与回应：</span>作者承认生态中心主义常被批评为"不切实际的空想"，但随即反驳：即便如此，它为生态旅游管理提供了不可替代的哲学基础——这是论证中处理对立观点的标准范式。</div>
+          </div>
+        </div>
+        <div class="vocab-box">
+          <div><span class="en-word">Tragedy of the Commons (Hardin, 1968)</span> <span class="cn-word">公地悲剧</span></div>
+          <div class="cn-def">当资源为公共所有时，理性个体都有动机过度使用，最终导致资源枯竭。旅游目的地过度开发是典型案例。解决方案：互相同意的管制措施。</div>
+        </div>
+        <div class="vocab-box">
+          <div><span class="en-word">mutual coercion</span> <span class="cn-word">互相强制</span></div>
+          <div class="cn-def">哈丁提出的解决方案：通过民主同意的规则（税收、许可证、配额）约束个人行为，保护公共资源。"强制"在此是中性的，指社会协议而非专制。</div>
+        </div>
+        <div class="vocab-box">
+          <div><span class="en-word">carrying capacity</span> <span class="cn-word">承载容量</span></div>
+          <div class="cn-def">一个地区在不造成不可接受的自然/社会损害前提下，能容纳的最大游客数量。是生态旅游管理的核心工具概念（第4章专章讨论）。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARGUMENT MAP -->
+<section class="arg-overview" id="argument-map">
+  <h2>📐 全文论证结构总览</h2>
+  <p class="subtitle">Introduction + Chapter 1 &amp; 2 ｜ 问题 → 论点 → 证据 → 反驳 → 结论 逻辑骨架</p>
+
+  <div class="arg-chain">
+    <div class="arg-node">
+      <div class="node-label">① 问题 Problem</div>
+      <div class="node-cn">旅游业是全球最大产业，但传统大众旅游正在破坏其赖以为生的自然与文化资源</div>
+    </div>
+    <div class="arg-node">
+      <div class="node-label">② 背景 Context</div>
+      <div class="node-cn">气候危机+环境意识增强+发展中国家对旅游业的依赖，使旅游模式转型成为紧迫政治议题</div>
+    </div>
+    <div class="arg-node">
+      <div class="node-label">③ 论点 Thesis</div>
+      <div class="node-cn">生态旅游反映人类自然观的根本转变（而非旅游时尚），以生态中心主义为哲学基础，具有保护+教育+赋权社区三重使命</div>
+    </div>
+    <div class="arg-node">
+      <div class="node-label">④ 证据 Evidence</div>
+      <div class="node-cn">增速数据、四要素定义（第1章）、哲学分析（工具价值vs内在价值）、公地悲剧（第2章）</div>
+    </div>
+    <div class="arg-node">
+      <div class="node-label">⑤ 反驳 Rebuttal</div>
+      <div class="node-cn">承认：绿色洗涤/实施困难/知识-行为缺口/生态中心主义被批为空想，但坚持：哲学基础仍不可缺</div>
+    </div>
+    <div class="arg-node">
+      <div class="node-label">⑥ 结论 Conclusion</div>
+      <div class="node-cn">需要哲学（价值观转变）、政策（管制机制）、社区（赋权参与）三层面联动，使生态旅游真正可持续</div>
+    </div>
+  </div>
+
+  <div class="arg-meta">
+    <div class="arg-meta-item am-core">
+      <div class="am-label">🎯 作者核心主张（一句话版本）</div>
+      <div class="am-text">生态旅游是以生态中心主义哲学为基础、兼顾保护目标与社区利益的可持续旅游模式，其根本意义在于揭示并推动人类与自然关系的根本转型——它不是旅游产品分类，而是一种价值选择与社会运动。</div>
+    </div>
+    <div class="arg-meta-item am-strong">
+      <div class="am-label">✅ 论证最强处</div>
+      <div class="am-text"><strong>第2章的哲学分析</strong>是全书论证最扎实的部分：通过"人类中心主义vs生态中心主义"的系统对立，梳理了西方自然观的历史演变（洛克→深生态学→土地伦理），并借助哈丁的"公地悲剧"为政策管制提供了经济学基础，超越了纯道德呼吁，具有较强的说服力。</div>
+    </div>
+    <div class="arg-meta-item am-weak">
+      <div class="am-label">⚠️ 论证最弱处</div>
+      <div class="am-text"><strong>定义的可操作性不足（第1章）：</strong>生态旅游的四要素定义较为理想化，未提供可量化的判断标准（如何客观衡量"积极贡献于保护"？）。这使"生态旅游"概念容易被滥用（绿色洗涤），也是后文第3、8章反复讨论认证与政策执行问题的根源所在。</div>
+    </div>
+  </div>
+</section>
+
+</div>
+</body>
+</html>
